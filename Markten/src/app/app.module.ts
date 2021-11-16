@@ -3,22 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// Import toolbar and card modules
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatCardModule } from '@angular/material/card';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MarktenMaterialDesignModule } from './markten-material-design/markten-material-design.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule,
-    MatCardModule,
-    NoopAnimationsModule
+    MarktenMaterialDesignModule
   ],
   providers: [],
   bootstrap: [AppComponent]
