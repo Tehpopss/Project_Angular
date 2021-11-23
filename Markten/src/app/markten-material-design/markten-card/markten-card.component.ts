@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarktenCardComponent implements OnInit {
 
+  ImageUrl: string = "/assets/images/Markt_Wervik.jpg";
+
   constructor() { }
 
   ngOnInit(): void {
