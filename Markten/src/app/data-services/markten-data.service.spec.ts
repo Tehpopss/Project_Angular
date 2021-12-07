@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MarktDataService } from './markt-data.service';
+import { MarktenDataService } from './markten-data.service';
 
-describe('MarktDataService', () => {
-  let service: MarktDataService;
+describe('MarktenDataService', () => {
+  let service: MarktenDataService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(MarktDataService);
+    service = TestBed.inject(MarktenDataService);
   });
 
   it('should be created', () => {

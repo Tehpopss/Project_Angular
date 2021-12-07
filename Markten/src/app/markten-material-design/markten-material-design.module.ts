@@ -22,7 +22,8 @@ import { MarktenFooterComponent } from './markten-footer/markten-footer.componen
   ],
   exports: [
     MarktenToolbarComponent,
-    MarktenCardComponent
+    MarktenCardComponent,
+    MarktenFooterComponent,
   ]
 })
 export class MarktenMaterialDesignModule { }
