@@ -9,6 +9,8 @@ import { MarktenToolbarComponent } from './markten-toolbar/markten-toolbar.compo
 import { MarktenCardComponent } from './markten-card/markten-card.component';
 import { MarktenFooterComponent } from './markten-footer/markten-footer.component';
 
+import { MarktenDataService } from "src/app/data-services/markten-data.service";
+
 @NgModule({
   declarations: [
     MarktenToolbarComponent,
@@ -20,6 +22,7 @@ import { MarktenFooterComponent } from './markten-footer/markten-footer.componen
     MatCardModule,
     MatToolbarModule
   ],
+  providers:[MarktenDataService],
   exports: [
     MarktenToolbarComponent,
     MarktenCardComponent,
