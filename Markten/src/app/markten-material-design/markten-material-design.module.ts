@@ -7,11 +7,13 @@ import { MatCardModule } from '@angular/material/card';
 
 import { MarktenToolbarComponent } from './markten-toolbar/markten-toolbar.component';
 import { MarktenCardComponent } from './markten-card/markten-card.component';
+import { MarktenFooterComponent } from './markten-footer/markten-footer.component';
 
 @NgModule({
   declarations: [
     MarktenToolbarComponent,
-    MarktenCardComponent
+    MarktenCardComponent,
+    MarktenFooterComponent
   ],
   imports: [
     CommonModule,
