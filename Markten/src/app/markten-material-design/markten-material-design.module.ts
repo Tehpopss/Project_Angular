@@ -10,17 +10,24 @@ import { MarktenCardComponent } from './markten-card/markten-card.component';
 import { MarktenFooterComponent } from './markten-footer/markten-footer.component';
 
 import { MarktenDataService } from "src/app/data-services/markten-data.service";
+import { AddMarktComponent } from './add-markt/add-markt.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field'
 
 @NgModule({
   declarations: [
     MarktenToolbarComponent,
     MarktenCardComponent,
-    MarktenFooterComponent
+    MarktenFooterComponent,
+    AddMarktComponent
   ],
   imports: [
     CommonModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule,
+    MatFormFieldModule
   ],
   providers:[MarktenDataService],
   exports: [
