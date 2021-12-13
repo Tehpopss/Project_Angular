@@ -1,4 +1,11 @@
-<app-markten-toolbar></app-markten-toolbar>
-<app-markten-card></app-markten-card>
+<app-markten-toolbar>
+  {{title}}
+  <a routerLink="/markten-card">
+    Homepage
+  </a>
+  <a routerLink="/add-markt">
+    Add Markt
+  </a>
+</app-markten-toolbar>
 <app-markten-footer (whatAMarkt)="printMarkt($event)"></app-markten-footer>
 <router-outlet></router-outlet>

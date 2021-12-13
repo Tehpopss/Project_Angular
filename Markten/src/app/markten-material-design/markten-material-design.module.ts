@@ -34,6 +34,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
     MarktenToolbarComponent,
     MarktenCardComponent,
     MarktenFooterComponent,
+    AddMarktComponent
   ]
 })
 export class MarktenMaterialDesignModule { }

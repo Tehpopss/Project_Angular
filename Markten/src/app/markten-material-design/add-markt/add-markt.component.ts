@@ -8,23 +8,10 @@ import { Markten } from '../models/markten'
 })
 export class AddMarktComponent implements OnInit {
 
-  Name = ""
-  markten: Markten;
-  addItem(event: any){
-    this.item.push(event.value);
-  }
-  removeHandler(item: string){
-    this.items.splice(this.item.indexOf(item),1);
-  }
-  constructor() {
-    this.markt = new Markten();
-   }
+  marktenName : string="";
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  get model(){
-    return JSON.stringify(this.markten);
   }
 
 }
