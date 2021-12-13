@@ -1,6 +1,4 @@
 <app-markten-toolbar></app-markten-toolbar>
 <app-markten-card></app-markten-card>
-<app-markten-footer>
-  <div>Profiel details go here</div>
-</app-markten-footer>
+<app-markten-footer (whatAMarkt)="printMarkt($event)"></app-markten-footer>
 <router-outlet></router-outlet>

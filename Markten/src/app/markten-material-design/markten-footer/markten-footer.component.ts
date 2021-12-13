@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import MarktenText from '../utilities/markten-text'
 
 @Component({
@@ -10,7 +10,9 @@ import MarktenText from '../utilities/markten-text'
 export class MarktenFooterComponent implements OnInit {
 
   @Input() name = "Aeson Delcroix";
-  @Input("lives-in") livesIn = "Belgium"
+  @Input("located-in") locatedIn = "Belgium"
+
+  @Output() whatAMarkt = new EventEmitter<Markten>();
 
   constructor(private marktenText: MarktenText) { }
 
@@ -18,4 +20,16 @@ export class MarktenFooterComponent implements OnInit {
     console.log(this.marktenText);
   }
 
+  returnMarktData(){
+    let markt = {
+      name: this.name,
+      locatedIn: this.locatedIn,
+    };
+    this.whatAMarkt.emit(markt);
+  }
+}
+
+export type Markten = {
+  name: string;
+  locatedIn: string;
 }
