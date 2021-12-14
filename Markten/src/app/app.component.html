@@ -1,11 +1,12 @@
 <app-markten-toolbar>
   {{title}}
-  <a routerLink="/markten-card">
+  <span class="central-stretchable-space"></span>
+  <a class="action" routerLink="/markten-card">
     Homepage
   </a>
-  <a routerLink="/add-markt">
+  <a class="action" routerLink="/add-markt">
     Add Markt
   </a>
 </app-markten-toolbar>
-<app-markten-footer (whatAMarkt)="printMarkt($event)"></app-markten-footer>
 <router-outlet></router-outlet>
+<app-markten-footer (whatAMarkt)="printMarkt($event)"></app-markten-footer>

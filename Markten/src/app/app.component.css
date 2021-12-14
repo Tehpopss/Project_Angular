@@ -1,0 +1,8 @@
+.central-stretchable-space {
+  flex: 1 1 auto;
+ }
+
+ .action{
+   color: white;
+   margin-right: 10px;
+ }
