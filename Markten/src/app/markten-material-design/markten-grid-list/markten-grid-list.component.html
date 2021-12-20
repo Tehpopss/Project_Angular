@@ -1,1 +1,8 @@
 <p>markten-grid-list works!</p>
+<mat-grid-list cols=1 rowHeight=100px>
+  <mat-grid-tile *ngFor="let markt of markten | async; let i=index">
+    <mat-card>
+      {{markt.name}}
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

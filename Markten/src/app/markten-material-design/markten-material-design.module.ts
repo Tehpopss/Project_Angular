@@ -16,6 +16,8 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import { AddMarktReactiveFormComponent } from './add-markt-reactive-form/add-markt-reactive-form.component';
 import { MarktenGridListComponent } from './markten-grid-list/markten-grid-list.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { MarktenGridListComponent } from './markten-grid-list/markten-grid-list.
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatGridListModule
   ],
   providers:[MarktenDataService],
   exports: [

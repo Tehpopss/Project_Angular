@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from "rxjs";
+import { MarktenDataService } from "src/app/app-http-calls/markten-data.service";
+import { Markten } from "../models/markten";
 
 @Component({
   selector: 'app-markten-grid-list',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarktenGridListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private marktService: MarktenDataService) { }
+
+  markten: Observable<Array<Markten>> | undifend;
 
   ngOnInit(): void {
+    this.markten=this.marktenService.getMarkten();
+    )
   }
 
 }
