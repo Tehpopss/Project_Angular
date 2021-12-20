@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddMarktComponent } from './markten-material-design/add-markt/add-markt.component';
+import { AddMarktReactiveFormComponent } from './markten-material-design/add-markt-reactive-form/add-markt-reactive-form.component';
 import { MarktenCardComponent } from './markten-material-design/markten-card/markten-card.component'
 
 const routes: Routes = [
   {
     path: "add-markt",
-    component: AddMarktComponent
+    component: AddMarktReactiveFormComponent
   },
   {
     path: "markten-card",

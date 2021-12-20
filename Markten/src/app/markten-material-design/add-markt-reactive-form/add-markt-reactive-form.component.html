@@ -1,0 +1,23 @@
+
+<form #marktenForm="ngForm" [formGroup]="marktenFormGroup" (submit)="submitHandler()">
+  <div>
+    <!-- Appearance: Outline -->
+    <mat-form-field appearance="outline">
+      <mat-label>Markt Name</mat-label>
+      <input type="text" name="name" formControlName="name" matInput placeholder="A name to be remembered" />
+      <mat-hint>Enter name</mat-hint>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <!-- Appearance: Outline -->
+    <mat-form-field appearance="outline">
+      <mat-label>Markt Location</mat-label>
+      <input type="text" name="locatie" formControlName="locatie" matInput placeholder="A location to be remembered" />
+      <mat-hint>Enter location</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="pull-right">
+    <button mat-stroked-button> Save </button>
+  </div>
+</form>
