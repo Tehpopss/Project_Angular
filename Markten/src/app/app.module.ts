@@ -5,7 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MarktenMaterialDesignModule } from './markten-material-design/markten-material-design.module';
+import { MarktenMaterialDesignModule } from './markten-material-design/markten-material-design.module';
+
+import { AppHttpCallsModule } from './app-http-calls/app-http-calls.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import {MarktenMaterialDesignModule } from './markten-material-design/markten-ma
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MarktenMaterialDesignModule
+    MarktenMaterialDesignModule,
+    AppHttpCallsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

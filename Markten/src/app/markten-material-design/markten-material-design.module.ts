@@ -15,13 +15,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import { AddMarktReactiveFormComponent } from './add-markt-reactive-form/add-markt-reactive-form.component';
+import { MarktenGridListComponent } from './markten-grid-list/markten-grid-list.component';
 
 @NgModule({
   declarations: [
     MarktenToolbarComponent,
     MarktenCardComponent,
     MarktenFooterComponent,
-    AddMarktReactiveFormComponent
+    AddMarktReactiveFormComponent,
+    MarktenGridListComponent
   ],
   imports: [
     BrowserAnimationsModule,
