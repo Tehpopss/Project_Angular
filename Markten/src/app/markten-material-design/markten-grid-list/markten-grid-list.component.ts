@@ -12,11 +12,10 @@ export class MarktenGridListComponent implements OnInit {
 
   constructor(private marktService: MarktenDataService) { }
 
-  markten: Observable<Array<Markten>> | undifend;
+  markten: Observable<Array<Markten>> | undefined;
 
   ngOnInit(): void {
-    this.markten=this.marktenService.getMarkten();
-    )
+    this.markten=this.marktService.getMarkten();
   }
 
 }

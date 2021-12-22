@@ -2,7 +2,10 @@
 <mat-grid-list cols=1 rowHeight=100px>
   <mat-grid-tile *ngFor="let markt of markten | async; let i=index">
     <mat-card>
-      {{markt.name}}
+      <div>
+        {{markt.name}} <br>
+        {{markt.locatie}}
+      </div>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>

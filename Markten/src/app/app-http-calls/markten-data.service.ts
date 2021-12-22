@@ -12,7 +12,7 @@ export class MarktenDataService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getMarkten(){
-    return this.httpClient.get<Array<Markten>>(`${URL_PREFIX}/markten`);
+  getMarkten(): Observable<Markten[]>{
+    return this.httpClient.get<Markten[]>(`${URL_PREFIX}/markten`);
   }
 }
