@@ -15,4 +15,8 @@ export class MarktenDataService {
   getMarkten(): Observable<Markten[]>{
     return this.httpClient.get<Markten[]>(`${URL_PREFIX}/markten`);
   }
+
+  postMarkten(markt:Markten):Observable<Markten> {
+    return this.httpClient.post<Markten>(`${URL_PREFIX}/markten`,markt);
+  }
 }

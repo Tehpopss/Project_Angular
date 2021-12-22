@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Markten } from "../models/markten";
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MarktenDataService } from "src/app/app-http-calls/markten-data.service";
 
 @Component({
   selector: 'app-add-markt-reactive-form',
@@ -9,28 +10,27 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class AddMarktReactiveFormComponent implements OnInit {
 
-  name: FormControl = this.fb.control("Ladies & Gents, We Got Him");
+  marktForm = new FormGroup({
+    name: new FormControl(''),
+    locatie: new FormControl(''),
+  });
 
-  marktenFormGroup: FormGroup;
+  constructor(private marktHttp: MarktenDataService, private fb: FormBuilder){
 
-  constructor(private fb: FormBuilder) {
-    this.marktenFormGroup = new FormGroup({
-      name: new FormControl('', Validators.required),
-      locatie: new FormControl('', Validators.required)
-    });
-   }
+  }
 
   ngOnInit(): void {
-    this.marktenFormGroup
-      .valueChanges
-      .subscribe(item =>
-        console.log("Stream as from changes, ", item as Markten));
-      this.name.valueChanges.subscribe(result => console.log(result));
+    this.marktForm = this.fb.group({
+      name:[""],
+      locatie:[""]
+    })
   }
 
   submitHandler() {
-    let markten = this.marktenFormGroup.value as Markten;
-    console.log("Marken model object", markten);
+    console.log(this.marktForm.value);
+    this.marktHttp
+    .postMarkten(this.marktForm.value)
+    .subscribe(data => console.log(data));
   }
 
 }
