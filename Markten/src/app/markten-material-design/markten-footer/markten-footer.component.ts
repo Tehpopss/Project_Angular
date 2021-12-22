@@ -14,6 +14,21 @@ export class MarktenFooterComponent implements OnInit {
 
   @Output() whatAMarkt = new EventEmitter<Markten>();
 
+
+  private _firstAppearance: number = 2021;
+  @Input()
+  set firstAppearance(val: number){
+    if (val > 1950){
+      this._firstAppearance = val;
+    }else{
+      console.error("Markt is to ancient");
+    }
+  }
+
+  get firstAppearance() {
+    return this._firstAppearance;
+  }
+
   constructor(private marktenText: MarktenText) { }
 
   ngOnInit(): void {
