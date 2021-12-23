@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import MarktenText from '../utilities/markten-text'
 
 @Component({
   selector: 'app-markten-footer',
@@ -29,10 +28,10 @@ export class MarktenFooterComponent implements OnInit {
     return this._firstAppearance;
   }
 
-  constructor(private marktenText: MarktenText) { }
+  constructor() { }
 
   ngOnInit(): void {
-    console.log(this.marktenText);
+
   }
 
   returnMarktData(){
