@@ -11,17 +11,11 @@ export class MarktenCardComponent implements OnInit {
 
   ImageUrl: string = "/assets/images/Markt_Wervik.jpg";
 
-  constructor(private marktData: MarktenDataService) {
-
-  }
+  constructor(private marktData: MarktenDataService) { }
 
   ngOnInit(): void {
-    this.markten = this.marktData.getMarkten().subscribe(data => console.log(data));
+    this.marktData.getMarkten().subscribe(data => console.log(data));
   }
 
 }
 
-export type Markten ={
-  name: string;
-  location: string;
-}
