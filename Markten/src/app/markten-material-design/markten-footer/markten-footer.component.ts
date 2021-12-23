@@ -3,10 +3,12 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-markten-footer',
   templateUrl: './markten-footer.component.html',
-  styleUrls: ['./markten-footer.component.css'],
-  providers: [MarktenText]
+  styleUrls: ['./markten-footer.component.css']
 })
 export class MarktenFooterComponent implements OnInit {
+
+  @Input() name = "Aeson Delcroix";
+  @Input("located-in") locatedIn = "Belgium"
 
   @Output() whatAMarkt = new EventEmitter<Markten>();
 

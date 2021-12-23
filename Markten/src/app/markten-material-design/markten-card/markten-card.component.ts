@@ -16,7 +16,7 @@ export class MarktenCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.marktData.getMarkten().subscribe(data => console.log(data));
+    this.markten = this.marktData.getMarkten().subscribe(data => console.log(data));
   }
 
 }
