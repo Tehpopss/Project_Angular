@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarktenMaterialDesignModule } from './markten-material-design/markten-material-design.module';
 
 import { AppHttpCallsModule } from './app-http-calls/app-http-calls.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,13 @@ import { AppHttpCallsModule } from './app-http-calls/app-http-calls.module';
     BrowserModule,
     AppRoutingModule,
     MarktenMaterialDesignModule,
-    AppHttpCallsModule
+    AppHttpCallsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
