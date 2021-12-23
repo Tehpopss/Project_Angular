@@ -8,9 +8,6 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class MarktenFooterComponent implements OnInit {
 
-  @Input() name = "Aeson Delcroix";
-  @Input("located-in") locatedIn = "Belgium"
-
   @Output() whatAMarkt = new EventEmitter<Markten>();
 
 
